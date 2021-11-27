@@ -8,8 +8,8 @@
 
 contém:
 
-> JS
-> PHP
-> MYSQL
-> HTML
-> CSS
+> JS<br>
+> PHP<br>
+> MYSQL<br>
+> HTML<br>
+> CSS<br>
