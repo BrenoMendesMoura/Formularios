@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+*{
+font-family: cursive;
+} 
+
+body {
+background-image: url("fundo.jpg");
+}
+
+
+	
+
+</style>
+<script>
+
+function enviar()
+{
+	var nome = $("#txtNome");
+	var mensagem = $("#mensagem");
+	
+	if(nome.val()=="")
+	{
+		mensagem.removeClass("alert");
+		mensagem.removeClass("alert-success");
+		mensagem.html("Inválido");
+		mensagem.addClass("alert");
+		mensagem.addClass("alert-danger");
+	}
+	else
+	{
+		mensagem.removeClass("alert");
+		mensagem.removeClass("alert-danger");
+		mensagem.addClass("alert");
+		mensagem.addClass("alert-success");
+		mensagem.html("Olá "+nome.val());
+	}
+	
+}
+
+</script>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-grid.css">
+<link rel="stylesheet" href="css/bootstrap-reboot.css">
+<link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light  bg-warning mb-5 "> 
+  <button class="navbar-toggler" type="button" 
+  data-toggle="collapse"
+  data-target="#navbarNavAltMarkup"
+  aria-controls="navbarNavAltMarkup"
+  aria-expanded="false"
+  aria-label="Toggle navigation">
+
+  
+   <span class="navbar-toggler-icon"></span>	
+   </button>
+     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	 <div class="navbar-nav">
+	 <a class="navbar-brand" href="https://portalwebdesigner.com/programacao/">PRWIII</a>
+      <a class="nav-link" href="#">Home</a>
+      <a class="nav-link" href="#">Galeria</a>
+      <a class="nav-link" href="#">Sobre</a>
+      <a class="nav-link" href="#">Contato</a>
+      <a class="nav-link" href="#">Produtos</a>
+	  
+    </div>
+</div>
+    <span class="navbar-text col offset-md-4 text-right"> Breno Mendes Moura</span>
+</nav>
+<div class="text-center mb-5 text-white">LOGIN | REGISTRO</div>
+<div class="col-md-4 offset-md-4">
+<div class="container-sm">
+<div class="form-group">
+<label for="txtNome" class="text-white">Nome:</label>
+<input type="text" class="form-control mb-1 " id="txtNome">
+<label for="txtNome" class="text-white">Senha:</label>
+<input type="text" class="form-control mb-1 " id="txtSenha">
+</div>
+
+<button onclick="enviar()" class="btn btn-warning mb-3 text-white">Enviar</button>
+<div class="form-group">
+<p class="text-white">Deseja se registrar?
+<button onclick="enviar()" class="btn btn-warning mb-3 text-white">Registro</button>
+</p>
+
+</div>
+
+<blockquote class="fixed-bottom mb-0 blockquote text-center bg-warning ">
+
+<a href="https://github.com/BrenoMendesMoura/BrenoMendesMoura"> <img src="GitHub-Mark-32px.png"  class="mb-0"></a>
+<a href="https://github.com/BrenoMendesMoura/BrenoMendesMoura"> <img src="GitHub-Mark-32px.png"  class="mb-0"></a>
+<a href="https://github.com/BrenoMendesMoura/BrenoMendesMoura"> <img src="GitHub-Mark-32px.png"  class="mb-0"></a>
+<a href="https://github.com/BrenoMendesMoura/BrenoMendesMoura"> <img src="GitHub-Mark-32px.png"  class="mb-0"></a>
+</div>
+</blockquote>
+
+</br>
+
+<div id="mensagem" role="alert"></div>
+
+</div>
+</div>
+<script src="jquery-3.6.0.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+*{
+    font-family: monospace;
+}
+body {
+  background: linear-gradient(-45deg,rgba(0, 147, 46, 1), rgba(23, 196, 75, 1), rgba(100, 225, 138, 1), rgba(115, 169, 132, 1), rgba(127, 127, 127, 1));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+    50% {
+		background-position: 50% 75%;
+	}
+	100% {
+		background-position: 75% 100%;
+	}
+
+}
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+
+  }
+
+}
+.h3 {
+    margin-top: 25%;
+    text-align: center;
+}
+.footer{
+    color: #04AA6D;
+}
+
+.formulario{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.texto{
+    font-family: monospace;
+    text-align: center;
+    margin-bottom: 5%;
+}
+    </style>
+        <script> 
+            function validar()
+            {
+            var nome= form1.nome.value;
+            var email= form1.email.value;
+            var tel= form1.tel.value;
+            var contact= form1.contact.value;
+            
+              if(nome=="" || email=="" || tel=="")
+              {
+                alert("Preencha os campos obrigatórios");
+                return false;
+            }
+        }
+             </script>
+             <h1 class="texto">Formulário | TADS | PHP</h1>
+<div class="formulario">
+    <form name="form1" action="welcome_get.php" method="get">
+        Nome: <input type="text" id="nome" name="nome" ><br>
+        E-mail: <input type="text" id="email" name="email" ><br>
+        Telefone: <input type="text" id="tel" name="tel" ><br>
+      <br>  <p>Qual o seu Curso?</p><select id="Curso" name="Curso"><br>
+            <option value="TADS">TADS</option>
+            <option value="Medicina">Medicina</option>
+            <option value="Direito">Direito</option>
+            <option value="Educação">Educação</option>
+            <option value="Engenharias a Arquitetura">Engenharias a Arquitetura</option>
+            <option value="Gerenciais">Gerenciais</option>
+            <option value="Saúde">Saúde</option>
+          </select><br>
+
+        <p>Qual semestre você está cursando? </p>
+        <input type="radio" id="contactChoice1"
+        name="contact" value="1° Semestre">
+       <label for="contactChoice1">1°</label>
+   
+       <input type="radio" id="contactChoice2"
+        name="contact" value="2° Semestre">
+       <label for="contactChoice2">2°</label>
+   
+       <input type="radio" id="contactChoice3"
+        name="contact" value="3° Semestre">
+       <label for="contactChoice3">3°</label>
+       <input type="radio" id="contactChoice4"
+       name="contact" value="4° Semestre">
+       <label for="contactChoice4">4°</label>
+
+      <input type="radio" id="contactChoice5"
+      name="contact" value="5° Semestre">
+      <label for="contactChoice5">5°</label><br>
+
+      <P>Selecione uma foto de perfil</P>
+      <input type="file" name="filefield" multiple="multiple">
+
+      <input type="submit" value="Submit" onclick="return validar()">
+
+        </form>
+<br>
+<div>
+<footer class="footer">
+        <h4 class="h3">Realizado por, Breno Mendes Moura<br>
+            1°Semestre <BR>
+            TADS<br>
+        </h4>
+    </footer>
+</body>
+</html>

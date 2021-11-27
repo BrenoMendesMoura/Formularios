@@ -1,0 +1,12 @@
+Breno Mendes Moura
+
+
+Relatório:
+Foi realizado um formulário com 5 campos.
+
+Foi utilizado:
+-HTML (Criação do formulário)
+-CSS (Estilização do formulário)
+-JS (Obrigatório a inserção de informação no formulário para realizar o envio)
+-PHP (Exibir o form com método GET)
+-MYSQL (Banco de dados para o preenchimento dos dados)
